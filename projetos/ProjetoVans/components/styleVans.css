@@ -1,0 +1,237 @@
+/* Edita o codigo inteiro e retira as barras de rolagem */
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Altera o fundo do cabeçalho e o que esta dentro dele */
+.inicio{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-image:url(imagens/VansFundo.jpg)
+}
+/* Altera a Div do cabeçalho e tudo dentro dele */
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 5.4vh;
+    margin: auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-right:none ;
+    border-top: none;
+}
+/* Altera a logo da vans */
+.img{
+    position: relative;
+    width: 120px;
+    height: 53px;
+    right: 0.8px;
+    top: 0.1px;
+    background-size: cover;
+    background-image: url(imagens/VansLogo.png)
+}
+/* Altera o input de pesquisa */
+.search{
+background-color: transparent;
+border: none;
+border-color: transparent;
+color: rgb(255, 255, 255);
+width: 10%;
+height: 10%;
+position: absolute;
+top: -2%;
+right: 63%;
+outline: none;
+}
+::placeholder{
+    color: white;
+}
+::-webkit-search-cancel-button{
+  display: none;
+}
+/* Icone do pesquisar */
+.lupa{
+    color: white;
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    right:73%;
+    top: 2%;
+}
+
+/* Opções de busca do site */
+select{
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    width: 8%;
+    font-size: 12px;
+    height: 5%;
+    right: 52%;
+    top: 0.5%;
+    outline: none;
+}
+/* cor do select */
+option{
+    color: black;
+}
+
+.Atend{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    right: 44%;
+    top: 2.1%;
+}
+
+.Ajuda{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    right: 38.5%;
+    top: 2.1%;
+}
+
+.Lojas{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    right: 30%;
+    top: 2.1%;
+}
+
+.Conta{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    right: 21.5%;
+    top: 2.1%;
+}
+
+.tracoBord{
+    position: relative;
+    border-right: 1px solid white;
+    width: 100px;
+    height: 53px;
+    top: -0.7px;
+    right: 80px;
+}
+
+.bolsa{
+    color: rgb(255, 0, 0);
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 26%;
+    right:-40%;
+}
+
+.coment{
+    position: absolute ;
+    color: rgb(255, 255, 255);
+    width: 15px;
+    height: 20px;
+    top: 2%;
+    right: 42.9%;
+}
+
+.info{
+    position: absolute ;
+    color: rgb(255, 255, 255);
+    width: 11px;
+    height: 13px;
+    top: 2%;
+    right: 37.7%;
+}
+
+.store{
+    position: absolute ;
+    color: rgb(255, 255, 255);
+    width: 11px;
+    height: 13px;
+    top: 2%;
+    right: 29.1%;
+}
+
+.user{
+    position: absolute ;
+    color: rgb(255, 255, 255);
+    width: 11px;
+    height: 13px;
+    top: 2%;
+    right: 20.7%;
+}
+
+#Web ,#Novidades, #Kids, #Feminino, #Masculino, #Latest, #Sale{
+    display: inline-block;
+    position: relative;
+    color: white;
+    margin: 1% 4.8% 0% 2%;
+    right: -10.7%;
+}
+
+.Titulo1{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 21%;
+    font-family:'Arial Narrow';
+    font-size: 55px;
+    word-spacing: 15px;
+    top: 40%;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.TextoVans{
+    color: white;
+    position: absolute;
+    left: 21.5%;
+    font-family:'Arial Narrow';
+    font-size: 22px;
+    top: 48.8%;
+}
+
+#Butao1{
+    background-color: red;
+    width: 9%;
+    height: 7%;
+    border: none;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    left: 21.5%;
+    top: 63%;
+}
+@media (max-width: 450px) {
+    .Titulo1{
+        color: rgb(0, 0, 0);
+    }
+  }
+  
+.dropdown{
+    position: relative;
+    display: inline;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    padding: 10px;
+    z-index: 1;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 10px rgba(11, 0, 0, 0.685);
+    transform: translateZ(20px);
+    opacity: calc(80%);
+    transition: opacity 20ms ease-in-out;
+}
+
+.dropdown:hover  .dropdown-content{
+    display: block;
+}
