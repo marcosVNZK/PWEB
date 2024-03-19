@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+h1 {
+	font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3{
+	background-color: #add3e2;
+	text-align:center;
+	padding-top:20px;
+	width: 400px;
+	height: 40px;
+	border: 1px solid #00ffff;
+	border-radius: 20px;
+	margin-bottom:4%;
+}
+
+a{
+	padding:20px;
+	background-color: blue;
+	border:2px solid #000080;
+	color: white
+}
+
+a:hover {
+	color: red
+}
