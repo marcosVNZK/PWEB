@@ -1,0 +1,28 @@
+package conexao.ifgoiano;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexao {
+	
+	public Conexao() {
+		try {
+			Connection c = DriverManager.getConnection(
+			"jdbc:postgresql://localhost/exemplo", "postgres" , "postgres");
+			System.out.println("Conectou!!");
+			c.close();
+		}catch(SQLException ex){
+			ex.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		new Conexao();
+		String campo1 = "Gomide";
+		String campo2 = "M";
+		String comando = "INSERT INTO teste (campo1,campo2) VALUES " +
+		"('" + campo1 + "','" + campo2 + "')";
+		System.out.println(comando);
+	}
+}
