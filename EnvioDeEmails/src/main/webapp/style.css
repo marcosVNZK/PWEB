@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+
+body {
+    text-align: center; /* Centraliza todo o conteúdo */
+}
+
+.container {
+    border: 2px solid black; /* Adiciona uma borda ao redor da div */
+    border-radius:10px;
+    width:60%;
+    height:50%;
+    padding: 10px; /* Adiciona espaço interno à borda */
+    display: inline-block; /* Permite que a div se ajuste ao conteúdo */
+}
+
+h1 {
+    font-size: 36px; /* Aumenta o tamanho da fonte do h1 */
+    padding-bottom:5%;
+    border-bottom: 1px solid black;
+}
+
+h3 {
+    font-size: 17px; /* Diminui o tamanho da fonte do h3 */
+    display: table; /* Permite que o h3 e o h1 fiquem em linha */
+}
+
+.op{
+	margin-top: 2%;
+	
+}
+
+.emAuto{
+	margin-bottom: 2%;
+}
+
+.email{
+	margin-top: 20px; /* Adiciona espaço acima dos elementos */
+    height: 40px; /* Aumenta o espaço de inserção de texto do input */
+	width: 50%;
+	border: 2px solid black
+	
+}
+
+.titulo{
+	margin-top: 20px; /* Adiciona espaço acima dos elementos */
+    height: 20px; /* Aumenta o espaço de inserção de texto do input */
+	width: 50%;
+	border: 2px solid black
+	
+}
+
+.texto{
+	margin-top: 20px; /* Adiciona espaço acima dos elementos */
+    height: 150px; /* Aumenta o espaço de inserção de texto do input */
+	width: 50%;
+	border: 2px solid black
+	
+}
+
+.textoLab{
+	position:relative;
+	top:-70px;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+
+button {
+	margin-top:20px;
+	width: 60px;
+	height: 20px;
+	position: relative;
+	background-color:blue;
+	right: -300px;
+	color: white;
+}
