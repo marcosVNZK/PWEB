@@ -28,14 +28,12 @@ public class ServletUser extends HttpServlet {
 					UsuarioRepositorio repositorio = new UsuarioRepositorio();
 					
 					List<Usuario> lstUsuario = repositorio.listarUsuarios();
-					
 					request.setAttribute("usuario", lstUsuario);
-					
 					request.getRequestDispatcher("listaUsuario.jsp").forward(request, response);
 					
 				}catch (Exception e) {
 					e.printStackTrace();
-					throw new ServletException("Erro na listagem de Usuários");
+					throw new ServletException("Erro na listagem de Usuï¿½rios");
 				}
 			}else {
 				request.setAttribute("mostrarFalha", true);

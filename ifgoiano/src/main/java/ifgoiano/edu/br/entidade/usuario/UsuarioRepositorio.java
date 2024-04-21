@@ -12,35 +12,41 @@ public class UsuarioRepositorio {
 
 	private Connection conn;
 
-	public static void main(String[] a) throws Exception {
-		Connection conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-		conn.close();
+	public UsuarioRepositorio() throws Exception {
+		conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 	}
 
 	public List<Usuario> listarUsuarios() {
-		List<Usuario> lstUsuario = new ArrayList<Usuario>();
+	    List<Usuario> lstUsuario = new ArrayList<Usuario>();
 
-		String sql = "select id, nome, email, senha, data_nascimento from usuario";
+	    String sql = "select id, nome, email, senha, data_nascimento from usuario";
 
-		try {
-			PreparedStatement pst = conn.prepareStatement(sql);
+	    try {
+	        PreparedStatement pst = conn.prepareStatement(sql);
 
-			ResultSet resultSet = pst.executeQuery();
-			while (resultSet.next()) {
-				Usuario usuario = new Usuario();
-				usuario.setId(resultSet.getInt("id"));
-				usuario.setNome(resultSet.getString("nome"));
-				usuario.setEmail(resultSet.getString("email"));
-				usuario.setSenha(resultSet.getString("senha"));
-				usuario.setDataNascimento(resultSet.getDate("data"));
+	        ResultSet resultSet = pst.executeQuery();
+	        while (resultSet.next()) {
+	            Usuario usuario = new Usuario();
+	            usuario.setId(resultSet.getInt("id"));
+	            usuario.setNome(resultSet.getString("nome"));
+	            usuario.setEmail(resultSet.getString("email"));
+	            usuario.setSenha(resultSet.getString("senha"));
+	            usuario.setDataNascimento(resultSet.getDate("data_nascimento"));
 
-				lstUsuario.add(usuario);
-			}
-		} catch (Exception e) {
-			System.out.println("Erro no usuario!");
-			e.printStackTrace();
-		}
-		return lstUsuario;
-
+	            lstUsuario.add(usuario);
+	        }
+	    } catch (Exception e) {
+	        System.out.println("Erro no usuario!");
+	        e.printStackTrace();
+	    } finally {
+	        try {
+	            if (conn != null) {
+	                conn.close();
+	            }
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
+	    return lstUsuario;
 	}
 }
