@@ -38,14 +38,6 @@ public class UsuarioRepositorio {
 	    } catch (Exception e) {
 	        System.out.println("Erro no usuario!");
 	        e.printStackTrace();
-	    } finally {
-	        try {
-	            if (conn != null) {
-	                conn.close();
-	            }
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
 	    }
 	    return lstUsuario;
 	}
