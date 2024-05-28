@@ -31,7 +31,6 @@ public class UsuarioRepositorio {
 	            usuario.setNome(resultSet.getString("nome"));
 	            usuario.setEmail(resultSet.getString("email"));
 	            usuario.setSenha(resultSet.getString("senha"));
-	            usuario.setDataNascimento(resultSet.getDate("data_nascimento"));
 
 	            lstUsuario.add(usuario);
 	        }

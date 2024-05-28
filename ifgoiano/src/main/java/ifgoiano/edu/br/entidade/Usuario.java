@@ -7,7 +7,6 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
-	private Date dataNascimento;
 	
 	public String getNome() {
 		return nome;
@@ -35,11 +34,4 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
 }
